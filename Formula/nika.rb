@@ -1,8 +1,8 @@
 class Nika < Formula
   desc "Local dashboard of Claude Code agents grouped by project"
   homepage "https://github.com/qmpwwsd/nika"
-  url "https://github.com/qmpwwsd/nika/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "df4c473402e49881520582424711f60b037c418eb979d3d487fdc329bdbccab2"
+  url "https://github.com/qmpwwsd/nika/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "b40a25347de400fd6793d922bbe18f8ab21fd984e2d17e7962bb151d10f68d7a"
   license "MIT"
 
   depends_on "node"
