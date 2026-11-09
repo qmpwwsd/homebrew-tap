@@ -1,8 +1,8 @@
 class Nika < Formula
   desc "Local dashboard and control panel for Claude Code agents"
   homepage "https://github.com/qmpwwsd/nika"
-  url "https://github.com/qmpwwsd/nika/archive/refs/tags/v0.2.1.tar.gz"
-  sha256 "f1dcc62e35b7ea08ef141ec0de03304a5a4d9437366c3286d36dcdade0e1114f"
+  url "https://github.com/qmpwwsd/nika/archive/refs/tags/v0.3.1.tar.gz"
+  sha256 "4714c81e65622013a1bc4ac3af7a3e4438da6b27d1fb69dde92f92c156f7a59c"
   license "MIT"
 
   depends_on "node"
@@ -30,9 +30,12 @@ class Nika < Formula
     return unless OS.mac?
 
     <<~EOS
-      The desktop app is #{opt_prefix}/nika.app. Open it once so macOS registers it
-      (after that `nika` and `nika app` find it):
-        open #{opt_prefix}/nika.app
+      The desktop app is #{opt_prefix}/nika.app. Spotlight and Launchpad do not look in the
+      Homebrew folder, so copy it to ~/Applications once (or press "Add to Applications"
+      when the app asks):
+        nika app install
+      After `brew upgrade`, running `nika` refreshes that copy (quit and reopen nika if it
+      was open).
       The read-only browser dashboard still runs with: brew services start nika
     EOS
   end
